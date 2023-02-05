@@ -31,10 +31,11 @@ def main():
     cep = Cep(codigo_cep)
     print(cep.endereco_completo())
 
+    # locale.setlocale(locale.LC_ALL, 'en_US.UTF-8')
     locale.setlocale(locale.LC_ALL, 'pt_BR.UTF-8')
     valores = [49.90, 19, 2143.84, 100200300.40, -14, -1645, -36.05]
     for item in valores:
-        print(locale.currency(item, grouping=True, symbol='R$'))
+        print(locale.currency(item, grouping=True))
     
 
 if __name__ == '__main__':
