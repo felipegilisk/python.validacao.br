@@ -1,5 +1,5 @@
 from validate_docbr import CPF, CNPJ
-from exceptions import CpfInvalidoError
+from libs.exceptions import CpfInvalidoError
 
 
 class Cpf:

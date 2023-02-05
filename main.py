@@ -1,7 +1,8 @@
-from cpf_cnpj import Cpf, Cnpj
-from telefone import Telefone
-from mail import Email
-from cep import Cep
+from libs.cpf_cnpj import Cpf, Cnpj
+from libs.telefone import Telefone
+from libs.mail import Email
+from libs.cep import Cep
+import locale
 
 def main():
     cpf = '35084333825'
@@ -29,6 +30,11 @@ def main():
     codigo_cep = '05508000'
     cep = Cep(codigo_cep)
     print(cep.endereco_completo())
+
+    locale.setlocale(locale.LC_ALL, 'pt_BR.UTF-8')
+    valores = [49.90, 19, 2143.84, 100200300.40, -14, -1645, -36.05]
+    for item in valores:
+        print(locale.currency(item, grouping=True, symbol='R$'))
     
 
 if __name__ == '__main__':

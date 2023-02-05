@@ -1,5 +1,5 @@
 import requests
-from exceptions import CepInvalidoError
+from libs.exceptions import CepInvalidoError
 
 class Cep:
     def __init__(self, cep) -> None:

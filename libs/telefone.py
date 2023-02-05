@@ -1,5 +1,5 @@
 import re
-from exceptions import TelefoneInvalidoError
+from libs.exceptions import TelefoneInvalidoError
 
 
 class Telefone:
@@ -7,7 +7,7 @@ class Telefone:
         if self.__validatelefone(telefone):
             self.__numero = telefone
         else:
-            raise ValueError("Número inválido, deve ser um celular ou fixo com DDD")
+            raise TelefoneInvalidoError("Número inválido, deve ser um celular ou fixo com DDD")
 
     def __validatelefone(self, telefone):
         if len(telefone) in range(6, 15):

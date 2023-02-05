@@ -1,5 +1,5 @@
 import re
-from exceptions import EmailInvalidoError
+from libs.exceptions import EmailInvalidoError
 
 class Email:
     def __init__(self, text) -> None:
